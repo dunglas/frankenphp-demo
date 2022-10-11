@@ -1,8 +1,6 @@
 {
     "type": "project",
     "license": "MIT",
-    "minimum-stability": "stable",
-    "prefer-stable": true,
     "require": {
         "php": ">=8.1",
         "ext-ctype": "*",
@@ -53,7 +51,12 @@
     },
     "replace": {
         "symfony/polyfill-ctype": "*",
-        "symfony/polyfill-iconv": "*"
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*"
     },
     "scripts": {
         "auto-scripts": {
@@ -73,7 +76,11 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "^6.1"
+            "require": "^6.1",
+            "docker": false
+        },
+        "runtime": {
+            "class": "App\\Runtime\\FrankenPhp\\Runtime"
         }
     },
     "require-dev": {

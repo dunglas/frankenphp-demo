@@ -1,7 +1,15 @@
+{
+    #debug
+	frankenphp {
+		worker ./public/index.php
+	}
+}
+
 localhost {
-	log
+	#log
 	route {
 		root * public/
+		#php_fastcgi 127.0.0.1:9000
 		# Add trailing slash for directory requests
 		@canonicalPath {
 			file {path}/index.php
@@ -19,7 +27,8 @@ localhost {
 		# FrankenPHP!
 		@phpFiles path *.php
 		php @phpFiles
-		encode zstd gzip
+
+		#encode zstd gzip
 		file_server
 
 		respond 404
