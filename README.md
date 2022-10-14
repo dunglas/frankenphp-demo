@@ -3,6 +3,12 @@
 A demo app using [FrankenPHP](https://frankenphp.dev) that uses
 Symfony and API Platform.
 
+Install composer dependencies:
+
+```
+docker run --rm -it -v $PWD:/app composer:latest install
+```
+
 Run the project (worker mode):
 
 ```
