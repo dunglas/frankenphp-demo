@@ -36,10 +36,9 @@ docker run \
     dunglas/frankenphp
 ```
 
-Build the database (it uses a local SQLite database stored in `var/data.db`):
+Create the database (it uses a local SQLite database stored in `var/data.db`):
 
 ```
-bin/console doctrine:database:create
 bin/console doctrine:migrations:migrate --no-interaction
 ```
 
@@ -54,5 +53,12 @@ Then you can access the application:
 * [Hello world page](https://localhost)
 * [API Platform](https://localhost/api)
 * [API Platform: collection of monsters (GET/jsonld)](https://localhost/api/monsters.jsonld)
+
+This application is a standard Symfony application and works without FrankenPHP.
+You can serve it with the Symfony CLI:
+
+```
+symfony serve
+```
 
 The repository also includes [a benchmark](benchmark) comparing FrankenPHP and PHP-FPM.
