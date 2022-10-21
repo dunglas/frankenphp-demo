@@ -43,7 +43,7 @@ bin/console doctrine:database:create
 bin/console doctrine:migrations:migrate --no-interaction
 ```
 
-Insert some data (or use the [API Platform](https://localhost/api/monsters) swagger interface):
+Insert some data (or use the [API Platform's Swagger UI](https://localhost/api/monsters)):
 
 ```
 bin/console doctrine:query:sql "INSERT into monster (name) values ('FrankenPHP 🐘')"
