@@ -31,9 +31,9 @@ docker run \
     dunglas/frankenphp
 ```
 
-PS: Docker is optional: you can also compile 
+**PS**: Docker is optional; you can also compile
 [FrankenPHP](https://github.com/dunglas/frankenphp/blob/main/docs/compile.md)
-by youself.
+by yourself.
 
 
 Create the database (It uses a local SQLite database stored in `var/data.db`):
@@ -52,7 +52,7 @@ Then you can access the application:
 
 * [Hello world page](https://localhost)
 * [API Platform](https://localhost/api)
-* [API Platform: collection of monsters (GET/jsonld)](https://localhost/api/monsters.jsonld)
+* [API Platform: collection of monsters (GET/JSON-LD)](https://localhost/api/monsters.jsonld)
 
 This demo is a standard Symfony application and works without FrankenPHP.
 Therefore, you can serve it with the Symfony CLI:
