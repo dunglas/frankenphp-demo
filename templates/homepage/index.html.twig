@@ -1,7 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomepageController!{% endblock %}
+{% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
-Hey !
+Hello {{ controller_name }}!<br/>
+<ul>
+    <li><a href="/api">API Platform's Swagger UI</a></li>
+    <li><a href="/api/monsters.jsonld">API Platform: collection of monsters (GET/JSON-LD)</a></li>
+</ul>
+<br/>
+
+<a href="https://github.com/dunglas/frankenphp">
+    <img width="400" src="https://github.com/dunglas/frankenphp/raw/main/frankenphp.png" alt="FrankenPHP"/>
+</a>
 {% endblock %}
