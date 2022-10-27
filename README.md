@@ -42,12 +42,6 @@ Create the database (It uses a local SQLite database stored in `var/data.db`):
 bin/console doctrine:migrations:migrate --no-interaction
 ```
 
-Insert some data (or use the [API Platform's Swagger UI](https://localhost/api/monsters)):
-
-```
-bin/console doctrine:query:sql "INSERT into monster (name) values ('FrankenPHP 🐘')"
-```
-
 Then you can access the application:
 
 * [Hello world page](https://localhost)
