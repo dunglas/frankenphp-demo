@@ -10,13 +10,13 @@ Symfony and API Platform.
 Install composer dependencies:
 
 ```
-docker run --rm -it -v $PWD:/app composer:latest install --ignore-platform-req=php
+docker run --rm -it -v $PWD:/app composer:latest install
 ```
 
 Or if you have composer installed locally:
 
 ```
-composer install --ignore-platform-req=php
+composer install
 ```
 
 ### The project
