@@ -1,5 +1,8 @@
 {
-    #debug
+	# This file is only used for dev and benchmarking.
+	# Please see /etc/Caddyfile in the container, for the one that is actual used in this demo
+
+	#debug
 	frankenphp {
 		worker ./public/index.php
 	}
