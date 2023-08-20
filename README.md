@@ -9,13 +9,13 @@ Symfony and API Platform.
 
 Install composer dependencies:
 
-```
+```console
 docker run --rm -it -v $PWD:/app composer:latest install
 ```
 
 Or if you have composer installed locally:
 
-```
+```console
 composer install
 ```
 
@@ -23,7 +23,7 @@ composer install
 
 Run the project with Docker (worker mode):
 
-```
+```console
 docker run \
     -e FRANKENPHP_CONFIG="worker ./public/index.php" \
     -v $PWD:/app \
@@ -38,7 +38,7 @@ by yourself.
 
 Create the database (It uses a local SQLite database stored in `var/data.db`):
 
-```
+```console
 bin/console doctrine:migrations:migrate --no-interaction
 ```
 
@@ -51,7 +51,7 @@ Then you can access the application:
 This demo is a standard Symfony application and works without FrankenPHP.
 Therefore, you can serve it with the Symfony CLI:
 
-```
+```console
 symfony serve
 ```
 
