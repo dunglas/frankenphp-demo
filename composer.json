@@ -5,27 +5,27 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "api-platform/core": "^3.1",
-        "doctrine/doctrine-bundle": "^2.4",
-        "doctrine/doctrine-migrations-bundle": "^3.2",
-        "doctrine/orm": "^2.10",
-        "runtime/frankenphp-symfony": "^0.1.0",
+        "api-platform/core": "^3.2.1",
+        "doctrine/doctrine-bundle": "^2.10.2",
+        "doctrine/doctrine-migrations-bundle": "^3.2.4",
+        "doctrine/orm": "^2.16.2",
+        "runtime/frankenphp-symfony": "^0.1.1",
         "symfony/asset": "^6.3",
-        "symfony/console": "^6.3",
+        "symfony/console": "^6.3.4",
         "symfony/dotenv": "^6.3",
         "symfony/expression-language": "^6.3",
-        "symfony/flex": "^2.3",
-        "symfony/framework-bundle": "^6.3",
-        "symfony/monolog-bundle": "^3.0",
-        "symfony/property-access": "^6.3",
+        "symfony/flex": "^2.4",
+        "symfony/framework-bundle": "^6.3.6",
+        "symfony/monolog-bundle": "^3.8",
+        "symfony/property-access": "^6.3.2",
         "symfony/property-info": "^6.3",
         "symfony/proxy-manager-bridge": "^6.3",
-        "symfony/runtime": "^6.3",
-        "symfony/security-bundle": "^6.3",
-        "symfony/serializer": "^6.3",
+        "symfony/runtime": "^6.3.2",
+        "symfony/security-bundle": "^6.3.6",
+        "symfony/serializer": "^6.3.6",
         "symfony/twig-bundle": "^6.3",
-        "symfony/validator": "^6.3",
-        "symfony/yaml": "^6.3"
+        "symfony/validator": "^6.3.6",
+        "symfony/yaml": "^6.3.3"
     },
     "config": {
         "optimize-autoloader": true,
@@ -84,9 +84,9 @@
         }
     },
     "require-dev": {
-        "symfony/debug-bundle": "^6.3",
-        "symfony/maker-bundle": "^1.50",
+        "symfony/debug-bundle": "^6.3.2",
+        "symfony/maker-bundle": "^1.51.1",
         "symfony/stopwatch": "^6.3",
-        "symfony/web-profiler-bundle": "^6.3"
+        "symfony/web-profiler-bundle": "^6.3.6"
     }
 }

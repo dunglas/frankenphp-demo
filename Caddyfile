@@ -33,7 +33,5 @@ localhost {
 
 		#encode zstd gzip
 		file_server
-
-		respond 404
 	}
 }
