@@ -56,3 +56,21 @@ symfony serve
 ```
 
 The repository also includes [a benchmark](benchmark) comparing FrankenPHP and PHP-FPM.
+
+
+## Package as a Standalone Binary
+
+The demo app can be packaged as a self-contained binary containing
+the Symfony app, FrankenPHP and the PHP extensions used by the app.
+
+To do so, the easiest way is to use the provided `Dockerfile`:
+
+```console
+docker build -t static-app -f static-build.Dockerfile .
+docker cp $(docker create --name static-app-tmp static-app):/go/src/app/dist/frankenphp-linux-x86_64 frankenphp-demo ; docker rm static-app-tmp
+```
+
+The resulting binary is `frankenphp-demo` in the current directory.
+It can be started with `./frankenphp-demo php-server`.
+
+To reduce the size before distributing it, compress it with `xz`.
