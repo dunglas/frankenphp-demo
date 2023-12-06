@@ -1,9 +1,5 @@
 FROM --platform=linux/amd64 dunglas/frankenphp:static-builder
 
-# Install Composer
-ENV COMPOSER_ALLOW_SUPERUSER=1
-COPY --from=composer/composer:2-bin --link /composer /usr/bin/composer
-
 # Prepare the app
 WORKDIR /go/src/app/dist/app
 COPY . .
@@ -16,5 +12,4 @@ RUN echo APP_ENV=prod > .env.local ; \
 WORKDIR /go/src/app/
 RUN EMBED=dist/app/ \
     PHP_EXTENSIONS=ctype,iconv,pdo_sqlite \
-    FRANKENPHP_VERSION=custom \
     ./build-static.sh
