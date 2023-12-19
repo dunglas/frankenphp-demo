@@ -9,7 +9,7 @@
         "doctrine/doctrine-bundle": "^2.11",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^2.17",
-        "runtime/frankenphp-symfony": "dev-main",
+        "runtime/frankenphp-symfony": "0.2",
         "symfony/asset": "^7.0",
         "symfony/console": "^7.0",
         "symfony/dotenv": "^7.0",
