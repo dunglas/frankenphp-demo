@@ -78,5 +78,3 @@ chmod +x ./frankenphp-demo
 ```
 
 It's also possible to run commands with `./frankenphp-demo php-cli bin/console`.
-
-To reduce the size before distributing it, compress it with `xz`.
