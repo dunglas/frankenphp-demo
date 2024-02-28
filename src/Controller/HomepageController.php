@@ -8,11 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomepageController extends AbstractController
 {
+    private int $counter = 0;
+
     #[Route("/", name: "homepage")]
     public function index(): Response
     {
        return $this->render('homepage/index.html.twig', [
             'controller_name' => 'HomepageController',
+           'counter' => ++$this->counter,
         ]);
     }
 }
