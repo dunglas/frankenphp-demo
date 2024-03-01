@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
+{% block title %}
+    Hello {{ controller_name }}!
+    Authorization: {{ authorization }}
+{% endblock %}
 
 {% block body %}
 Hello {{ controller_name }}!<br/>
