@@ -29,7 +29,7 @@ docker run \
     -v $PWD:/app \
     -p 80:80 -p 443:443/tcp -p 443:443/udp \
     --name FrankenPHP-demo \
-    -d \
+    --wait \
     dunglas/frankenphp
 ```
 
