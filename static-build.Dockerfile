@@ -11,5 +11,4 @@ RUN echo APP_ENV=prod > .env.local ; \
 # Build the static binary
 WORKDIR /go/src/app/
 RUN EMBED=dist/app/ \
-    PHP_EXTENSIONS=ctype,iconv,pdo_sqlite \
     ./build-static.sh
