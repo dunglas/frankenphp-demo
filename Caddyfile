@@ -1,18 +1,25 @@
 {
-	# This file is only used for dev and benchmarking.
-	# Please see /etc/Caddyfile in the container, for the one that is actual used in this demo
-
-	#debug
 	frankenphp {
 		worker ./public/index.php
 	}
 }
 
 localhost {
-	#log
-	route {
-		root * public/
-		#php_fastcgi 127.0.0.1:9000
-		php_server
+	log
+
+	root * public/
+
+	request_header X-Sendfile-Type x-accel-redirect
+	intercept {
+		@sendfile header X-Accel-Redirect *
+		handle_response @sendfile {
+			root * private-files/
+			rewrite * {resp.header.X-Accel-Redirect}
+			method * GET
+			header -X-Accel-Redirect
+			file_server
+		}
 	}
+
+	php_server
 }

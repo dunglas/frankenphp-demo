@@ -1,0 +1,16 @@
+{
+	# This file is only used for benchmarking.
+	# Please see Caddyfile, for the one that is actual used in this demo
+
+	frankenphp {
+		worker ./public/index.php
+	}
+}
+
+localhost {
+	route {
+		root * public/
+		#php_fastcgi 127.0.0.1:9000
+		php_server
+	}
+}
