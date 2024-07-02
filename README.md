@@ -26,6 +26,7 @@ Run the project with Docker (worker mode):
 ```console
 docker run \
     -e FRANKENPHP_CONFIG="worker ./public/index.php" \
+    -v $PWD/Caddyfile:/etc/caddy/Caddyfile \
     -v $PWD:/app \
     -p 80:80 -p 443:443/tcp -p 443:443/udp \
     --name FrankenPHP-demo \
