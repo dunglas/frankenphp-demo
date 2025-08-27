@@ -7,7 +7,7 @@ export default function () {
   check(res, {
   'is status 200': (r) => r.status === 200,
   'verify homepage text': (r) =>
-      r.body.includes('Hey'),
+      r.body.includes('Hello'),
   'protocol is HTTP/2': (r) => r.proto === 'HTTP/2.0',
   });
   sleep(1);
