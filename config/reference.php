@@ -999,9 +999,9 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *             lifetime?: int, // Default: 31536000
  *             path?: scalar|null, // Default: "/"
  *             domain?: scalar|null, // Default: null
- *             secure?: true|false|"auto", // Default: null
+ *             secure?: true|false|"auto", // Default: false
  *             httponly?: bool, // Default: true
- *             samesite?: null|"lax"|"strict"|"none", // Default: "lax"
+ *             samesite?: null|"lax"|"strict"|"none", // Default: null
  *             always_remember_me?: bool, // Default: false
  *             remember_me_parameter?: scalar|null, // Default: "_remember_me"
  *         },
